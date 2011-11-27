@@ -28,7 +28,7 @@
 		return;
 	}
 	[self.presentingViewController dismissModalViewControllerAnimated:YES];
-	[[BTViewController singleton].web reload];
+	[[BTViewController singleton] reload];
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 {

@@ -17,6 +17,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="kKv-gq-Ezb"/>
+                                </connections>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="vd6-Kg-Ag9">
                                 <rect key="frame" x="0.0" y="416" width="320" height="44"/>
@@ -30,7 +33,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Settings" id="jsd-cK-ns4">
                                         <connections>
-                                            <segue destination="8qv-lg-lDF" kind="modal" id="mUo-7g-DLp"/>
+                                            <segue destination="8qv-lg-lDF" kind="modal" identifier="showSettings" id="mUo-7g-DLp"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -40,10 +43,10 @@
                     </view>
                     <connections>
                         <outlet property="web" destination="oWL-BZ-xyk" id="xYn-DD-jdT"/>
-                        <segue destination="8qv-lg-lDF" kind="modal" identifier="showSettings" id="sfS-AE-erU"/>
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="115" y="18"/>
         </scene>
         <scene sceneID="BR2-gj-lbt">
             <objects>
@@ -179,33 +182,12 @@
             <point key="canvasLocation" x="587" y="-36"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BTSettingVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTSettingVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="field" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BTSettingsVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTSettingsVC.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-            </relationships>
-        </class>
-        <class className="BTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BTViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="web" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sfS-AE-erU"/>
         <segue reference="cLU-6D-wVG"/>
     </inferredMetricsTieBreakers>
 </document>

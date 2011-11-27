@@ -5,6 +5,7 @@ static __weak BTViewController *g_singleton;
 @implementation BTViewController {
 	NSString *_pendingURL;
 	NSTimer *_timer;
+	UIAlertView *_errorAlert;
 }
 @synthesize web = _web;
 -(id)initWithCoder:(NSCoder *)aDecoder;
@@ -26,12 +27,18 @@ static __weak BTViewController *g_singleton;
 	if(!port) return nil;
 	return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@", host, port]];
 }
--(void)viewWillAppear:(BOOL)animated;
+-(void)reload;
 {
 	if(self.remoteUrl) {
 		NSURLRequest *req = [NSURLRequest requestWithURL:self.remoteUrl];
 		[_web loadRequest:req];
 	}
+
+}
+-(void)viewWillAppear:(BOOL)animated;
+{
+	if(!_web.request)
+		[self reload];
 }
 -(void)viewDidAppear:(BOOL)animated;
 {
@@ -55,5 +62,26 @@ static __weak BTViewController *g_singleton;
 	[_timer invalidate];
 	_timer = [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(addPendingTorrent) userInfo:nil repeats:YES];
 	[self addPendingTorrent];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+{
+	if([error.domain isEqual:NSURLErrorDomain] && error.code == NSURLErrorCancelled) {
+        // Just ignore, this is just an async call being cancelled
+		NSLog(@"Ignoring NSURLErrorCancelled");
+        return;
+    }
+	
+	_errorAlert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Couldn't find %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"Hostname"]] message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:@"Settings", nil];
+	[_errorAlert show];
+}
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex;
+{
+	if(buttonIndex == 1)
+		[self performSegueWithIdentifier:@"showSettings" sender:nil];
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+{
+	_errorAlert = nil;
 }
 @end
