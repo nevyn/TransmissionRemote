@@ -1,64 +1,59 @@
-//
-//  BTViewController.m
-//  Transmission
-//
-//  Created by Joachim Bengtsson on 2011-11-27.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "BTViewController.h"
 
-@implementation BTViewController
+static __weak BTViewController *g_singleton;
 
-- (void)didReceiveMemoryWarning
+@implementation BTViewController {
+	NSString *_pendingURL;
+	NSTimer *_timer;
+}
+@synthesize web = _web;
+-(id)initWithCoder:(NSCoder *)aDecoder;
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+	if(!(self = [super initWithCoder:aDecoder])) return nil;
+	g_singleton = self;
+	return self;
+}
++(BTViewController*)singleton;
+{
+	return g_singleton;
 }
 
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
+-(NSURL*)remoteUrl;
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	NSString *host = [[NSUserDefaults standardUserDefaults] objectForKey:@"Hostname"];
+	if(!host) return nil;
+	NSString *port = [[NSUserDefaults standardUserDefaults] objectForKey:@"Port"];
+	if(!port) return nil;
+	return [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:%@", host, port]];
 }
-
-- (void)viewDidUnload
+-(void)viewWillAppear:(BOOL)animated;
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-	} else {
-	    return YES;
+	if(self.remoteUrl) {
+		NSURLRequest *req = [NSURLRequest requestWithURL:self.remoteUrl];
+		[_web loadRequest:req];
 	}
 }
-
+-(void)viewDidAppear:(BOOL)animated;
+{
+	[super viewDidAppear:animated];
+	if(![[NSUserDefaults standardUserDefaults] objectForKey:@"Hostname"])
+		[self performSegueWithIdentifier:@"showSettings" sender:nil];
+}
+-(void)addPendingTorrent;
+{
+	NSString *token =  [_web stringByEvaluatingJavaScriptFromString:@"transmission.remote._token"];
+	if(!token) return; // site is not done loading
+	
+	NSString *cmd = [NSString stringWithFormat:@"transmission.remote.addTorrentByUrl('%@', {paused:false})", _pendingURL];
+	
+	[_web stringByEvaluatingJavaScriptFromString:cmd];
+	[_timer invalidate]; _timer = nil; _pendingURL = nil;
+}
+-(void)addTorrentAtLocation:(NSString*)url;
+{
+	_pendingURL = url;
+	[_timer invalidate];
+	_timer = [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(addPendingTorrent) userInfo:nil repeats:YES];
+	[self addPendingTorrent];
+}
 @end

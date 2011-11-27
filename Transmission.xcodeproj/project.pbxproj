@@ -16,23 +16,34 @@
 		05E59B8F14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E59B8D14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard */; };
 		05E59B9214825CAD00DD5D60 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E59B9014825CAD00DD5D60 /* MainStoryboard_iPad.storyboard */; };
 		05E59B9514825CAD00DD5D60 /* BTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E59B9414825CAD00DD5D60 /* BTViewController.m */; };
+		05E59B9D14825DE600DD5D60 /* TransmissionRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E59B9C14825DE600DD5D60 /* TransmissionRemote.m */; };
+		05E59BA01482637500DD5D60 /* BTSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E59B9F1482637500DD5D60 /* BTSettingsVC.m */; };
+		05E59BA3148263F800DD5D60 /* BTSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E59BA2148263F800DD5D60 /* BTSettingVC.m */; };
+		05E59BA7148281AC00DD5D60 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E59BA6148281AC00DD5D60 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05E59B7714825CAD00DD5D60 /* Transmission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transmission.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E59B7714825CAD00DD5D60 /* Transmission Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transmission Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E59B7B14825CAD00DD5D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05E59B7D14825CAD00DD5D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		05E59B7F14825CAD00DD5D60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		05E59B8314825CAD00DD5D60 /* Transmission-Info.plist */ = {isa = PBXFileReference; path = "Transmission-Info.plist"; sourceTree = "<group>"; };
+		05E59B8314825CAD00DD5D60 /* Transmission-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Transmission-Info.plist"; sourceTree = "<group>"; };
 		05E59B8514825CAD00DD5D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		05E59B8714825CAD00DD5D60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		05E59B8914825CAD00DD5D60 /* Transmission-Prefix.pch */ = {isa = PBXFileReference; path = "Transmission-Prefix.pch"; sourceTree = "<group>"; };
-		05E59B8A14825CAD00DD5D60 /* BTAppDelegate.h */ = {isa = PBXFileReference; path = BTAppDelegate.h; sourceTree = "<group>"; };
+		05E59B8914825CAD00DD5D60 /* Transmission-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Transmission-Prefix.pch"; sourceTree = "<group>"; };
+		05E59B8A14825CAD00DD5D60 /* BTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAppDelegate.h; sourceTree = "<group>"; };
 		05E59B8B14825CAD00DD5D60 /* BTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTAppDelegate.m; sourceTree = "<group>"; };
 		05E59B8E14825CAD00DD5D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		05E59B9114825CAD00DD5D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		05E59B9314825CAD00DD5D60 /* BTViewController.h */ = {isa = PBXFileReference; path = BTViewController.h; sourceTree = "<group>"; };
+		05E59B9314825CAD00DD5D60 /* BTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTViewController.h; sourceTree = "<group>"; };
 		05E59B9414825CAD00DD5D60 /* BTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTViewController.m; sourceTree = "<group>"; };
+		05E59B9B14825DE600DD5D60 /* TransmissionRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransmissionRemote.h; path = Shared/TransmissionRemote.h; sourceTree = SOURCE_ROOT; };
+		05E59B9C14825DE600DD5D60 /* TransmissionRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransmissionRemote.m; path = Shared/TransmissionRemote.m; sourceTree = SOURCE_ROOT; };
+		05E59B9E1482637500DD5D60 /* BTSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSettingsVC.h; sourceTree = "<group>"; };
+		05E59B9F1482637500DD5D60 /* BTSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSettingsVC.m; sourceTree = "<group>"; };
+		05E59BA1148263F800DD5D60 /* BTSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSettingVC.h; sourceTree = "<group>"; };
+		05E59BA2148263F800DD5D60 /* BTSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSettingVC.m; sourceTree = "<group>"; };
+		05E59BA6148281AC00DD5D60 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +72,7 @@
 		05E59B7814825CAD00DD5D60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05E59B7714825CAD00DD5D60 /* Transmission.app */,
+				05E59B7714825CAD00DD5D60 /* Transmission Remote.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,10 +92,16 @@
 			children = (
 				05E59B8A14825CAD00DD5D60 /* BTAppDelegate.h */,
 				05E59B8B14825CAD00DD5D60 /* BTAppDelegate.m */,
+				05E59B9B14825DE600DD5D60 /* TransmissionRemote.h */,
+				05E59B9C14825DE600DD5D60 /* TransmissionRemote.m */,
 				05E59B8D14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard */,
 				05E59B9014825CAD00DD5D60 /* MainStoryboard_iPad.storyboard */,
 				05E59B9314825CAD00DD5D60 /* BTViewController.h */,
 				05E59B9414825CAD00DD5D60 /* BTViewController.m */,
+				05E59B9E1482637500DD5D60 /* BTSettingsVC.h */,
+				05E59B9F1482637500DD5D60 /* BTSettingsVC.m */,
+				05E59BA1148263F800DD5D60 /* BTSettingVC.h */,
+				05E59BA2148263F800DD5D60 /* BTSettingVC.m */,
 				05E59B8214825CAD00DD5D60 /* Supporting Files */,
 			);
 			path = Transmission;
@@ -93,6 +110,7 @@
 		05E59B8214825CAD00DD5D60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05E59BA6148281AC00DD5D60 /* icon.png */,
 				05E59B8314825CAD00DD5D60 /* Transmission-Info.plist */,
 				05E59B8414825CAD00DD5D60 /* InfoPlist.strings */,
 				05E59B8714825CAD00DD5D60 /* main.m */,
@@ -104,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05E59B7614825CAD00DD5D60 /* Transmission */ = {
+		05E59B7614825CAD00DD5D60 /* Transmission Remote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05E59B9814825CAD00DD5D60 /* Build configuration list for PBXNativeTarget "Transmission" */;
+			buildConfigurationList = 05E59B9814825CAD00DD5D60 /* Build configuration list for PBXNativeTarget "Transmission Remote" */;
 			buildPhases = (
 				05E59B7314825CAD00DD5D60 /* Sources */,
 				05E59B7414825CAD00DD5D60 /* Frameworks */,
@@ -116,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = Transmission;
+			name = "Transmission Remote";
 			productName = Transmission;
-			productReference = 05E59B7714825CAD00DD5D60 /* Transmission.app */;
+			productReference = 05E59B7714825CAD00DD5D60 /* Transmission Remote.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05E59B7614825CAD00DD5D60 /* Transmission */,
+				05E59B7614825CAD00DD5D60 /* Transmission Remote */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +172,7 @@
 				05E59B8614825CAD00DD5D60 /* InfoPlist.strings in Resources */,
 				05E59B8F14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard in Resources */,
 				05E59B9214825CAD00DD5D60 /* MainStoryboard_iPad.storyboard in Resources */,
+				05E59BA7148281AC00DD5D60 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +186,9 @@
 				05E59B8814825CAD00DD5D60 /* main.m in Sources */,
 				05E59B8C14825CAD00DD5D60 /* BTAppDelegate.m in Sources */,
 				05E59B9514825CAD00DD5D60 /* BTViewController.m in Sources */,
+				05E59B9D14825DE600DD5D60 /* TransmissionRemote.m in Sources */,
+				05E59BA01482637500DD5D60 /* BTSettingsVC.m in Sources */,
+				05E59BA3148263F800DD5D60 /* BTSettingVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +272,12 @@
 		05E59B9914825CAD00DD5D60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Transmission/Transmission-Prefix.pch";
 				INFOPLIST_FILE = "Transmission/Transmission-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -261,10 +285,12 @@
 		05E59B9A14825CAD00DD5D60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Transmission/Transmission-Prefix.pch";
 				INFOPLIST_FILE = "Transmission/Transmission-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -281,7 +307,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05E59B9814825CAD00DD5D60 /* Build configuration list for PBXNativeTarget "Transmission" */ = {
+		05E59B9814825CAD00DD5D60 /* Build configuration list for PBXNativeTarget "Transmission Remote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05E59B9914825CAD00DD5D60 /* Debug */,
