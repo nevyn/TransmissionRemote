@@ -9,7 +9,8 @@
 {
 	[super viewWillAppear:animated];
 	for(UITableViewCell *cell in self.tableView.visibleCells)
-		cell.detailTextLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:cell.textLabel.text];
+		if([cell.reuseIdentifier isEqual:@"setting"])
+			cell.detailTextLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:cell.textLabel.text];
 }
 -(void)viewDidAppear:(BOOL)animated;
 {
@@ -34,6 +35,11 @@
 	}
 	[self.presentingViewController dismissModalViewControllerAnimated:YES];
 	[[BTViewController singleton] reload];
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+	if([[tableView cellForRowAtIndexPath:indexPath].reuseIdentifier isEqual:@"visitsite"])
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://transmissionbt.com"]];
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 {

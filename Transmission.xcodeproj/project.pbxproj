@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0513BF121484342D0046A090 /* howto_remoteaccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF0E1484342D0046A090 /* howto_remoteaccess@2x.png */; };
+		0513BF131484342D0046A090 /* howto_remoteaccess~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF101484342D0046A090 /* howto_remoteaccess~ipad.png */; };
 		0513BF16148439BA0046A090 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF15148439BA0046A090 /* Default-Landscape~ipad.png */; };
 		0513BF18148439C10046A090 /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF17148439C10046A090 /* Default~ipad.png */; };
 		0513BF1A14843D760046A090 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF1914843D760046A090 /* Default@2x.png */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0513BF0F1484342D0046A090 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/howto_remoteaccess@2x.png"; sourceTree = "<group>"; };
+		0513BF111484342D0046A090 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/howto_remoteaccess~ipad.png"; sourceTree = "<group>"; };
 		0513BF15148439BA0046A090 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		0513BF17148439C10046A090 /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
 		0513BF1914843D760046A090 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				05E59BA6148281AC00DD5D60 /* icon.png */,
+				0513BF0E1484342D0046A090 /* howto_remoteaccess@2x.png */,
+				0513BF101484342D0046A090 /* howto_remoteaccess~ipad.png */,
 				05E59B8314825CAD00DD5D60 /* Transmission-Info.plist */,
 				05E59B8414825CAD00DD5D60 /* InfoPlist.strings */,
 				05E59B8714825CAD00DD5D60 /* main.m */,
@@ -182,6 +188,8 @@
 				05E59B8F14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard in Resources */,
 				05E59B9214825CAD00DD5D60 /* MainStoryboard_iPad.storyboard in Resources */,
 				05E59BA7148281AC00DD5D60 /* icon.png in Resources */,
+				0513BF121484342D0046A090 /* howto_remoteaccess@2x.png in Resources */,
+				0513BF131484342D0046A090 /* howto_remoteaccess~ipad.png in Resources */,
 				0513BF16148439BA0046A090 /* Default-Landscape~ipad.png in Resources */,
 				0513BF18148439C10046A090 /* Default~ipad.png in Resources */,
 				0513BF1A14843D760046A090 /* Default@2x.png in Resources */,
@@ -207,6 +215,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0513BF0E1484342D0046A090 /* howto_remoteaccess@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0513BF0F1484342D0046A090 /* en */,
+			);
+			name = "howto_remoteaccess@2x.png";
+			sourceTree = "<group>";
+		};
+		0513BF101484342D0046A090 /* howto_remoteaccess~ipad.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0513BF111484342D0046A090 /* en */,
+			);
+			name = "howto_remoteaccess~ipad.png";
+			sourceTree = "<group>";
+		};
 		05E59B8414825CAD00DD5D60 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -326,6 +350,7 @@
 				05E59B9A14825CAD00DD5D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
