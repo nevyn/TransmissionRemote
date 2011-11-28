@@ -16,6 +16,11 @@
 	[super viewDidAppear:animated];
 	[self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:animated];
 }
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)or;
+{
+	return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ?: or == UIInterfaceOrientationPortrait;
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell*)sender;
 {
 	[(BTSettingVC*)segue.destinationViewController setSettingsKey:sender.textLabel.text];

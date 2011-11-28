@@ -46,6 +46,10 @@ static __weak BTViewController *g_singleton;
 	if(![[NSUserDefaults standardUserDefaults] objectForKey:@"Hostname"])
 		[self performSegueWithIdentifier:@"showSettings" sender:nil];
 }
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)or;
+{
+	return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ?: or == UIInterfaceOrientationPortrait;
+}
 -(void)addPendingTorrent;
 {
 	NSString *token =  [_web stringByEvaluatingJavaScriptFromString:@"transmission.remote._token"];

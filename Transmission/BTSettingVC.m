@@ -9,6 +9,11 @@
 	self.field.text = [[NSUserDefaults standardUserDefaults] objectForKey:self.settingsKey];
 	[self.field becomeFirstResponder];
 }
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)or;
+{
+	return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ?: or == UIInterfaceOrientationPortrait;
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 {
 	[[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:self.settingsKey];
