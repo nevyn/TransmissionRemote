@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0513BF16148439BA0046A090 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF15148439BA0046A090 /* Default-Landscape~ipad.png */; };
+		0513BF18148439C10046A090 /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF17148439C10046A090 /* Default~ipad.png */; };
+		0513BF1A14843D760046A090 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513BF1914843D760046A090 /* Default@2x.png */; };
 		05E59B7C14825CAD00DD5D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E59B7B14825CAD00DD5D60 /* UIKit.framework */; };
 		05E59B7E14825CAD00DD5D60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E59B7D14825CAD00DD5D60 /* Foundation.framework */; };
 		05E59B8014825CAD00DD5D60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E59B7F14825CAD00DD5D60 /* CoreGraphics.framework */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0513BF15148439BA0046A090 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		0513BF17148439C10046A090 /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
+		0513BF1914843D760046A090 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		05E59B7714825CAD00DD5D60 /* Transmission Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transmission Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E59B7B14825CAD00DD5D60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		05E59B7D14825CAD00DD5D60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +69,9 @@
 		05E59B6C14825CAD00DD5D60 = {
 			isa = PBXGroup;
 			children = (
+				0513BF1914843D760046A090 /* Default@2x.png */,
+				0513BF17148439C10046A090 /* Default~ipad.png */,
+				0513BF15148439BA0046A090 /* Default-Landscape~ipad.png */,
 				05E59B8114825CAD00DD5D60 /* Transmission */,
 				05E59B7A14825CAD00DD5D60 /* Frameworks */,
 				05E59B7814825CAD00DD5D60 /* Products */,
@@ -173,6 +182,9 @@
 				05E59B8F14825CAD00DD5D60 /* MainStoryboard_iPhone.storyboard in Resources */,
 				05E59B9214825CAD00DD5D60 /* MainStoryboard_iPad.storyboard in Resources */,
 				05E59BA7148281AC00DD5D60 /* icon.png in Resources */,
+				0513BF16148439BA0046A090 /* Default-Landscape~ipad.png in Resources */,
+				0513BF18148439C10046A090 /* Default~ipad.png in Resources */,
+				0513BF1A14843D760046A090 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
